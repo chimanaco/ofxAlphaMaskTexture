@@ -5,7 +5,7 @@
 
 class ofxAlphaMaskTexture {
 public:
-    ofxAlphaMaskTexture(ofTexture topLayer, ofTexture bottomLayer, ofTexture maskLayer);
+    ofxAlphaMaskTexture(ofTexture topLayer, ofTexture bottomLayer, ofTexture maskLayer, int w, int h);
     void draw();
     
     string frag;

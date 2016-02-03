@@ -1,6 +1,6 @@
 #include "ofxAlphaMaskTexture.h"
 
-ofxAlphaMaskTexture::ofxAlphaMaskTexture(ofTexture _topLayer, ofTexture _bottomLayer, ofTexture _maskLayer){
+ofxAlphaMaskTexture::ofxAlphaMaskTexture(ofTexture _topLayer, ofTexture _bottomLayer, ofTexture _maskLayer, int w, int h){
     maskScale = 1.0;
     maskAlpha = 1.0;
     
@@ -61,8 +61,8 @@ ofxAlphaMaskTexture::ofxAlphaMaskTexture(ofTexture _topLayer, ofTexture _bottomL
     }
 
     
-    width = ofGetWidth();
-    height = ofGetHeight();
+    width = w;
+    height = h;
     maskFbo.allocate(width,height);
     fbo.allocate(width,height);
     
